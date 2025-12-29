@@ -1,3 +1,9 @@
+# Repo-related
+backplane-dns-*.tar.gz
+backplane-dns-*.tar.gz.sha256
+.vscode/
+.pants.d/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

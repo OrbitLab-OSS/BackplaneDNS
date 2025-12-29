@@ -1,0 +1,34 @@
+[GLOBAL]
+pants_version = "2.29.0"
+backend_packages = [
+    "pants.backend.shell",
+    "pants.backend.experimental.tools.yamllint"
+]
+
+[anonymous-telemetry]
+enabled = false
+
+[system-binaries]
+system_binary_paths = [
+  "/usr/bin",
+  "/bin",
+  "/usr/local/bin",
+  "/opt/homebrew/bin",
+  "/home/*/.nvm/versions/node/*/bin",
+  "/Users/*/.nvm/versions/node/*/bin",
+]
+
+[cli.alias]
+all = "::"
+
+[source]
+root_patterns = [
+  "/",
+]
+
+[python]
+interpreter_constraints = [">=3.12"]
+enable_resolves = true
+
+[test]
+use_coverage = true
