@@ -1,5 +1,6 @@
 shell_source(name="build-script", source="build.sh")
 shell_source(name="download-coredns", source="coredns.sh")
+shell_source(name="obd-tool", source="obd-tool.sh")
 
 shell_command(
     name="coredns",
@@ -13,5 +14,5 @@ shell_command(
 run_shell_command(
     name="build",
     command="CHROOT={chroot} bash ./build.sh",
-    execution_dependencies=[":build-script", ":coredns", "resources:resources"],
+    execution_dependencies=[":build-script", ":obd-tool", ":coredns", "resources:resources"],
 )
